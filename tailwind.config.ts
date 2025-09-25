@@ -57,6 +57,27 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom wee-hour palette
+        midnight: "hsl(var(--midnight))",
+        twilight: "hsl(var(--twilight))",
+        "amber-glow": "hsl(var(--amber-glow))",
+        "purple-mist": "hsl(var(--purple-mist))",
+        "warm-white": "hsl(var(--warm-white))",
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+        "gradient-accent": "var(--gradient-accent)",
+        "gradient-glow": "var(--gradient-glow)",
+      },
+      boxShadow: {
+        glow: "var(--shadow-glow)",
+        soft: "var(--shadow-soft)",
+        card: "var(--shadow-card)",
+      },
+      transitionTimingFunction: {
+        smooth: "var(--transition-smooth)",
+        glow: "var(--transition-glow)",
       },
       borderRadius: {
         lg: "var(--radius)",
