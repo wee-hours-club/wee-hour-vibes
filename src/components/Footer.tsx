@@ -1,96 +1,187 @@
 import { Button } from "@/components/ui/button";
-import { Moon, MessageCircle, Users, Calendar } from "lucide-react";
+import { Moon, Heart, Mic, Shield, HelpCircle, FileText, Lock, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { BsMoonStars } from "react-icons/bs";
+import { GiCoffeeCup } from "react-icons/gi";
+import { FloatingCandle } from "./DecorativeElements";
 
 const Footer = () => {
   return (
-    <footer className="bg-twilight border-t border-purple-mist/20 py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          {/* Logo & Description */}
-          <div className="md:col-span-2">
-            <div className="flex items-center mb-4">
-              <Moon className="w-8 h-8 text-amber-glow mr-2" />
-              <h3 className="text-2xl font-bold text-warm-white">weehour.club</h3>
-            </div>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              The feeling of wee hours, anytime. Voice-first companionship 
-              when you need it most.
+    <footer className="relative bg-muted/30 dark:bg-background border-t border-border/50">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <FloatingCandle className="top-10 right-20 opacity-10" />
+        <FloatingCandle className="bottom-20 left-32 opacity-10" delay={2000} />
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-6 py-16">
+        {/* Main content */}
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
+          {/* Brand section */}
+          <div className="md:col-span-1">
+            <Link to="/" className="flex items-center mb-6 group">
+              <div className="w-10 h-10 bg-gradient-soft rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                <Moon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-2xl font-serif text-foreground">weehour.club</h3>
+            </Link>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Where late-night souls find their perfect conversation. Experience the warmth of human connection, anytime.
             </p>
-            <div className="space-y-2">
-              <Button variant="hero" size="lg" className="mr-4">
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Start Talking
-              </Button>
-              <Button variant="ghost-glow" size="lg">
-                <Users className="w-4 h-4 mr-2" />
-                Become a Host
-              </Button>
+            <div className="space-y-3">
+              <Link to="/join">
+                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Heart className="w-4 h-4 mr-2" />
+                  Find Your Host
+                </Button>
+              </Link>
+              <Link to="/host">
+                <Button variant="outline" className="w-full border-primary/30 hover:bg-primary/10">
+                  <Mic className="w-4 h-4 mr-2" />
+                  Become a Host
+                </Button>
+              </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-warm-white mb-4">Connect</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-amber-glow transition-colors">1:1 Sessions</a></li>
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Group Circles</a></li>
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Special Events</a></li>
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Browse Hosts</a></li>
-            </ul>
-          </div>
+          {/* Quick links */}
+          <div className="md:col-span-2 grid md:grid-cols-2 gap-8">
+            {/* For You */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-6 flex items-center">
+                <Heart className="w-4 h-4 mr-2 text-primary" />
+                For You
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link to="/join" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Browse Live Hosts
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/join#sessions" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    1:1 Sessions
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/join#events" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Themed Events
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/join#pricing" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Pricing Plans
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Host Resources */}
-          <div>
-            <h4 className="font-semibold text-warm-white mb-4">For Hosts</h4>
-            <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Start Hosting</a></li>
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Host Resources</a></li>
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Safety Guidelines</a></li>
-              <li><a href="#" className="hover:text-amber-glow transition-colors">Earnings</a></li>
-            </ul>
+            {/* For Hosts */}
+            <div>
+              <h4 className="font-semibold text-foreground mb-6 flex items-center">
+                <Mic className="w-4 h-4 mr-2 text-primary" />
+                For Hosts
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link to="/host" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Start Your Journey
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/host#benefits" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Host Benefits
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/host#stories" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Success Stories
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/host#support" className="text-muted-foreground hover:text-primary transition-colors inline-block">
+                    Host Support
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Example Use Cases */}
-        <div className="border-t border-purple-mist/20 pt-12 mb-12">
-          <h4 className="text-xl font-bold text-warm-white mb-8 text-center">
-            When to hop in
+        {/* Moments section */}
+        <div className="border-t border-border/50 pt-12 mb-12">
+          <h4 className="text-2xl font-serif text-foreground mb-10 text-center">
+            Your moments, our purpose
           </h4>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-amber-glow mb-2">📞</div>
-              <p className="text-sm text-muted-foreground">
-                <strong className="text-warm-white">Stressed midday?</strong><br />
-                Join a 10-minute pep talk
-              </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-soft/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <BsMoonStars className="w-8 h-8 text-primary" />
+              </div>
+              <h5 className="font-semibold text-foreground mb-2">Can't sleep?</h5>
+              <p className="text-sm text-muted-foreground">Night companions await</p>
             </div>
-            <div className="text-center">
-              <div className="text-amber-glow mb-2">🌙</div>
-              <p className="text-sm text-muted-foreground">
-                <strong className="text-warm-white">Lonely at night?</strong><br />
-                Find comfort in conversation
-              </p>
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-soft/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Heart className="w-8 h-8 text-primary" />
+              </div>
+              <h5 className="font-semibold text-foreground mb-2">Need to vent?</h5>
+              <p className="text-sm text-muted-foreground">Judgment-free listeners</p>
             </div>
-            <div className="text-center">
-              <div className="text-amber-glow mb-2">✨</div>
-              <p className="text-sm text-muted-foreground">
-                <strong className="text-warm-white">Want to share joy?</strong><br />
-                Celebrate with others
-              </p>
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-soft/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <GiCoffeeCup className="w-8 h-8 text-primary" />
+              </div>
+              <h5 className="font-semibold text-foreground mb-2">Morning ritual?</h5>
+              <p className="text-sm text-muted-foreground">Coffee chat companions</p>
+            </div>
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-gradient-soft/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Sparkles className="w-8 h-8 text-primary" />
+              </div>
+              <h5 className="font-semibold text-foreground mb-2">Feeling creative?</h5>
+              <p className="text-sm text-muted-foreground">Share in our circles</p>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-purple-mist/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © 2024 weehour.club. Creating safe spaces for meaningful connection.
-          </p>
-          <div className="flex space-x-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-amber-glow transition-colors">Privacy</a>
-            <a href="#" className="hover:text-amber-glow transition-colors">Terms</a>
-            <a href="#" className="hover:text-amber-glow transition-colors">Safety</a>
-            <a href="#" className="hover:text-amber-glow transition-colors">Support</a>
+        {/* Bottom section */}
+        <div className="border-t border-border/50 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <p className="text-sm text-muted-foreground text-center md:text-left">
+              © 2024 weehour.club • Creating safe spaces for meaningful connection
+            </p>
+            <nav className="flex flex-wrap items-center justify-center gap-6 text-sm">
+                     <Link 
+                      to="/safety" 
+                      className="text-muted-foreground hover:text-primary transition-colors flex items-center"
+                    >
+                      <Shield className="w-3 h-3 mr-1" />
+                      Safety
+                    </Link>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
+                <Lock className="w-3 h-3 mr-1" />
+                Privacy
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
+                <FileText className="w-3 h-3 mr-1" />
+                Terms
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors flex items-center">
+                <HelpCircle className="w-3 h-3 mr-1" />
+                Support
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Blog
+              </a>
+            </nav>
+          </div>
+          
+          {/* Tagline */}
+          <div className="text-center mt-12 pt-8 border-t border-border/30">
+            <p className="text-primary/80 italic font-serif text-lg">
+              "In the quiet hours, we find our loudest truths."
+            </p>
           </div>
         </div>
       </div>
