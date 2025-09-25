@@ -1,73 +1,158 @@
-# Welcome to your Lovable project
+# weehour.club 🌙
 
-## Project info
+> The feeling of wee hours, anytime.
 
-**URL**: https://lovable.dev/projects/03c9c743-c9ae-4134-91da-dd1ea1476c85
+weehour.club is a platform that creates safe spaces for meaningful human connections through voice conversations. Whether you need someone to talk to at 3 AM or want to share your experiences as a host, we're here to bridge the gap between solitude and connection.
 
-## How can I edit this code?
+## 🌟 Features
 
-There are several ways of editing your application.
+### For Users
+- **24/7 Live Hosts**: Connect instantly with verified hosts anytime
+- **Diverse Conversations**: From night companions to morning coffee chats
+- **Themed Events**: Join poetry circles, comedy nights, and more
+- **Multiple Languages**: Communicate in Hindi, English, or regional languages
+- **Pay-per-minute**: Affordable rates starting at ₹6/minute
 
-**Use Lovable**
+### For Hosts
+- **Earn from Empathy**: Turn your listening skills into income (₹20k-40k/month average)
+- **Flexible Schedule**: Host on your own time
+- **Safe Environment**: Moderated platform with full support
+- **Build Community**: Create your regular listener base
+- **Host Events**: Organize themed circles and group sessions
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/03c9c743-c9ae-4134-91da-dd1ea1476c85) and start prompting.
+## 🚀 Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: shadcn/ui
+- **Routing**: React Router v6
+- **State Management**: React Query (TanStack Query)
+- **Icons**: Lucide React + React Icons
+- **Theme**: Custom light/dark mode with vibrant tropical sunset and intimate candlelit themes
 
-**Use your preferred IDE**
+## 🛠️ Getting Started
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
+- Node.js 18+ and npm (install with [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation
 
-Follow these steps:
+```bash
+# Clone the repository
+git clone https://github.com/nichotin95/wee-hour-vibes.git
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Navigate to the project
+cd wee-hour-vibes
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The app will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+# Development server
+npm run dev
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Build for production
+npm run build
 
-## What technologies are used for this project?
+# Preview production build
+npm run preview
 
-This project is built with:
+# Run linter
+npm run lint
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Type checking
+npm run type-check
+```
 
-## How can I deploy this project?
+## 📁 Project Structure
 
-Simply open [Lovable](https://lovable.dev/projects/03c9c743-c9ae-4134-91da-dd1ea1476c85) and click on Share -> Publish.
+```
+src/
+├── components/        # Reusable UI components
+│   ├── ui/           # shadcn/ui components
+│   ├── Header.tsx    # Navigation header
+│   ├── Footer.tsx    # Site footer
+│   ├── HeroSection.tsx
+│   ├── LiveHosts.tsx
+│   ├── Stories.tsx
+│   └── ...
+├── pages/            # Route pages
+│   ├── Index.tsx     # Landing page
+│   ├── ForUsers.tsx  # User-focused page
+│   ├── ForHosts.tsx  # Host-focused page
+│   ├── About.tsx
+│   └── Safety.tsx
+├── providers/        # Context providers
+│   └── ThemeProvider.tsx
+├── hooks/           # Custom React hooks
+├── lib/             # Utility functions
+└── index.css        # Global styles & theme
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🎨 Design System
 
-Yes, you can!
+Our design philosophy centers around creating warm, inviting spaces that feel like late-night conversations with a trusted friend.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Color Themes
+- **Light Mode**: Vibrant tropical sunset palette with electric magenta, turquoise, and coral
+- **Dark Mode**: Intimate candlelit atmosphere with warm rose, deep teal, and burnt sienna
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Typography
+- **Headings**: Playfair Display (serif)
+- **Body**: Source Sans 3 (sans-serif)
+
+### Key Design Elements
+- Floating candles and fireflies for ambiance
+- Smooth animations and transitions
+- Real human photography for authenticity
+- Gradient overlays for depth and warmth
+
+## 🤝 Contributing
+
+We believe in building a community together. If you'd like to contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Contribution Guidelines
+- Maintain the empathetic, warm tone in all UI copy
+- Follow the existing code style and conventions
+- Test your changes thoroughly
+- Update documentation as needed
+
+## 📄 License
+
+This project is proprietary software. All rights reserved.
+
+## 🔗 Links
+
+- **Live Site**: [weehour.club](https://weehour.club) (coming soon)
+- **Documentation**: [docs.weehour.club](https://docs.weehour.club) (coming soon)
+
+## 💬 Contact
+
+For questions, suggestions, or to become a host:
+- Email: hello@weehour.club
+- Twitter: [@weehourclub](https://twitter.com/weehourclub)
+
+---
+
+<p align="center">
+  <em>"In the quiet hours, we find our loudest truths."</em>
+</p>
+
+<p align="center">
+  Made with ❤️ for late-night souls everywhere
+</p>
