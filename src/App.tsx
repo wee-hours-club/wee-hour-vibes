@@ -18,8 +18,6 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Initialize Microsoft Clarity
-    // Replace 'YOUR_CLARITY_PROJECT_ID' with your actual Clarity project ID
     clarity.init('thsa3lwh9i');
   }, []);
 
